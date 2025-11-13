@@ -1,69 +1,81 @@
-# House Price Prediction
+# House Price Prediction 🏠
 
-This repository contains a Jupyter Notebook focused on exploring, cleaning, and modeling a housing dataset to predict house prices.
+Predicting house prices based on demographic, geographic, and housing features using cleaned and processed data.
 
-🔹 Dataset Overview
+---
 
-    Original dataset: California Housing Prices (CSV file)
+## 📊 Project Overview
 
-    Includes demographic, geographic, and housing-related features
+This project focuses on exploring, cleaning, and modeling a housing dataset to predict prices. From raw data preprocessing to feature engineering and model evaluation, the goal was to create a robust predictive pipeline.
 
-    After preprocessing:
+**Key questions explored:**
 
-        Train shape: (X_train, y_train)
+* Which features most influence house prices?
+* How can raw housing data be cleaned and transformed for modeling?
+* How accurate is the model in predicting real-world prices?
 
-        Test shape: (X_test, y_test)
+---
 
-🔹 Cleaning & Processing Steps
+## 🧠 Key Steps
 
-    Removed duplicates and handled missing values (total_bedrooms)
+### **Data Cleaning & Preparation**
 
-    Standardized column formats and data types
+* Removed duplicates and handled missing values (e.g., `total_bedrooms`).
+* Standardized column formats and data types.
+* Scaled numerical features using **StandardScaler**.
+* Split data into **train (80%)** and **test (20%)** sets.
 
-    Scaled numerical features with StandardScaler
+### **Feature Engineering**
 
-    Split dataset into train (80%) and test (20%)
+Created new features to improve predictive performance:
 
-🔹 Feature Engineering
+* **total_rooms_per_household** — ratio of rooms per household.
+* **population_per_household** — household population density.
 
-    New features created to improve predictive power:
+### **Modeling & Evaluation**
 
-    total_rooms_per_household – ratio of rooms per household
+* **Algorithm:** Linear Regression
+* **Metrics:**
 
-    population_per_household – household population density
+  * MSE (Mean Squared Error)
+  * RMSE (Root Mean Squared Error)
+  * R² Score
+* Visualized **Actual vs Predicted Prices** for performance insight.
 
-🔹 Modeling & Evaluation
+---
 
-    Algorithm: Linear Regression
+## 🧩 Tools & Libraries
 
-    Metrics:
+* **Python 3.x**
+* **Pandas**
+* **NumPy**
+* **Matplotlib & Seaborn**
+* **Scikit-learn**
+* **Jupyter Notebook**
 
-        MSE (Mean Squared Error)
+---
 
-        RMSE (Root Mean Squared Error)
+## 📁 Files
 
-        R² Score
+* **House_Price_Prediction_Mariam.ipynb** — Jupyter Notebook containing full data cleaning, preprocessing, and modeling pipeline.
+* **housing.csv** — Original California Housing dataset (uploaded in Colab or local environment).
 
-    Visualized Actual vs Predicted Prices
+---
 
-🔹 Tech Stack
+## 🚀 Results Summary
 
-    Python
+* **Original dataset:** California Housing Prices CSV
+* **After preprocessing:**
 
-    Pandas, NumPy
+  * Train: `(X_train, y_train)`
+  * Test: `(X_test, y_test)`
 
-    Matplotlib, Seaborn
+**Outcome:** A cleaned and feature-engineered dataset ready for EDA, trend visualization, and predictive modeling of house prices.
 
-    Scikit-learn
+---
 
-    Jupyter Notebook
+## 👩‍💻 Author
 
-🔹 Purpose
-
-    The processed dataset and trained model are optimized for:
-
-    Exploratory Data Analysis (EDA)
-
-    Housing trend visualization
-
-    Predictive modeling of house prices
+**Mariam Elfar**
+*Mechatronics Engineering Student | Data Enthusiast | Researcher*
+Focused on transforming raw housing data into meaningful insights and predictive models.
